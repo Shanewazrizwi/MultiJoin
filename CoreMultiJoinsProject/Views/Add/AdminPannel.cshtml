@@ -1,0 +1,32 @@
+﻿@model IEnumerable<CoreMultiJoinsProject.Models.Departments>
+@{
+    ViewData["Title"] = "Admin Pannel";
+}
+<h1>AdminPannel</h1>
+
+<h4><span><a asp-controller="Add" asp-action="AddDepartment">Add-Department</a></span></h4>
+<h4><span><a asp-controller="Add" asp-action="AddEmployee">Add-Employee</a></span></h4>
+
+
+<h4><span><a asp-controller="Add" asp-action="AddCountry">Add-Country</a></span></h4>
+<h4><span><a asp-controller="Add" asp-action="AddState">Add-State</a></span></h4>
+<h4><span><a asp-controller="Add" asp-action="AddCity">Add-City</a></span></h4>
+
+
+
+<h1>Index</h1>
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Department</th>
+    </tr>
+    @foreach (var gDep in Model)
+    {
+        <tr>
+            <td>@gDep.Id</td>
+            <td>@gDep.Department</td>
+        </tr>
+    }
+</table>
+
+

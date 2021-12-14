@@ -1,0 +1,19 @@
+﻿@model IEnumerable<CoreMultiJoinsProject.Models.Countries>
+@{
+    ViewData["Title"] = "FilterCountry";
+}
+
+<h1>FilterCountry</h1>
+
+<ul>
+    @foreach (var gc in Model)
+    {
+        <li>
+            <a asp-controller="Add" asp-action="FilterState" asp-route-id="@gc.Id">@gc.CountryName</a>
+        </li>
+        
+    }
+</ul>
+
+
+

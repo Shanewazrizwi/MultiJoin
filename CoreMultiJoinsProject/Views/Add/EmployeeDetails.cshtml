@@ -1,0 +1,30 @@
+﻿@model IEnumerable<CoreMultiJoinsProject.Models.ViewModel.EmployeeDetails>
+@{
+    ViewData["Title"] = "EmployeeDetails";
+}
+
+<h1>EmployeeDetails</h1>
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Email</th>
+        <th>Salary</th>
+        <th>Department</th>
+        
+    </tr>
+    @foreach (var gEmp in Model)
+    {
+<tr>
+    <td>@gEmp.Id</td>
+    <td>@gEmp.Name</td>
+    <td>@gEmp.Gender</td>
+    <td>@gEmp.Email</td>
+    <td>@gEmp.Salary</td>
+    <td>@gEmp.Department</td>
+
+</tr>
+    }
+</table>
+

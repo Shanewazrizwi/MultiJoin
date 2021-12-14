@@ -1,0 +1,38 @@
+﻿@model CoreMultiJoinsProject.Models.ViewModel.CreateCities
+@{
+    ViewData["Title"] = "AddCity";
+}
+
+<h1>Add-City</h1>
+
+<h1>AddState</h1>
+<div class="row">
+    <div class="col-sm-6">
+        <form method="post" asp-controller="Add" asp-action="AddCity">
+            <div class="form-group">
+                <label asp-for="CityName"></label>
+                <input asp-for="CityName" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="CityCode"></label>
+                <input asp-for="CityCode" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label>Country</label>
+                <select name="statesId" class="form-control">
+                    <option value="">--Select--</option>
+                    @foreach (var getState in ViewBag.objGetCity)
+                    {
+                        <option value="@getState.Id">@getState.StateName</option>
+                    }
+                </select>
+            </div>
+            <div>
+
+                <input type="submit" class="btn btn-secondary btn-block" />
+            </div>
+        </form>
+    </div>
+</div>
+

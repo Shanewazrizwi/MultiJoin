@@ -1,0 +1,21 @@
+﻿@model CoreMultiJoinsProject.Models.Departments
+@{
+    ViewData["Title"] = "AddDepartment";
+}
+
+<h1>AddDepartment</h1>
+<div class="row">
+    <div class="col-sm-6">
+        <form method="post" asp-controller="Add" asp-action="AddDepartment">
+            <div class="form-group">
+                <label asp-for="Department"></label>
+                <input asp-for="Department"  class="form-control"/>
+            </div>
+            <div>
+                
+                <input type="submit" class="btn btn-secondary btn-block" />
+            </div>
+        </form>
+    </div>
+</div>
+
